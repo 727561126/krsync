@@ -1,0 +1,26 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: k8s-sync
+  namespace: default
+spec:
+  template:
+    metadata:
+      name: k8s-sync
+    spec:
+      serviceAccountName: sync-resource
+      containers:
+        - name: k8s-sync
+          image: yelang/krsync
+          imagePullPolicy: Always
+          volumeMounts:
+            - name: config-volume
+              mountPath: "/app/config/k8s-dts-config"
+              readOnly: true
+          volumes:
+            - name: config-volume
+              projected:
+                sources:
+                  - configMap:
+                      name: dst-config
