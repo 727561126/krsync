@@ -10,6 +10,7 @@ spec:
       name: k8s-sync
     spec:
       serviceAccountName: sync-resource
+      restartPolicy: OnFailure
       containers:
         - name: k8s-sync
           image: yelang/krsync
