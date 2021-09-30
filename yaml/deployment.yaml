@@ -16,7 +16,7 @@ spec:
           imagePullPolicy: Always
           volumeMounts:
             - name: config-volume
-              mountPath: "/app/config/k8s-dts-config"
+              mountPath: "/app/config"
               readOnly: true
           volumes:
             - name: config-volume
