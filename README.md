@@ -1,6 +1,7 @@
 # krsync
 k8s 资源同步工具,实现kubernetes集群之间单向同步deployment的功能。
 
+
 # 使用方法
 1. git clone git clone https://github.com/727561126/krsync.git
 2. config目录存在需要同步目标地kubernetes集群的config文件
@@ -11,3 +12,6 @@ k8s 资源同步工具,实现kubernetes集群之间单向同步deployment的功�
 
 # 如果对你有帮助请我喝杯咖啡哦，后期还有新功能上线。
 ![img.png](https://drsync.oss-cn-beijing.aliyuncs.com/wx.png)
+
+#功能更新
+2021-10-19 新增同步service功能。
